@@ -12,9 +12,69 @@
 
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+    <style>
+      .container{
+        background-color:purple;
+        width:100%;
+        height: 100%;
+      }
+      html,body{
+              width: 100%;
+              height: 100%;
+         }
+      #firstrow{
+/*         top:2%; */
+        -webkit-flex-direction:row;
+	      flex-direction:row;
+      }
+      #secondrow{
+/*         top:2%; */
+        -webkit-flex-direction:row;
+	      flex-direction:row;
+      }
+      .box{
+        display:-webkit-flex;
+	      display:flex;
+        position:absolute;
+        margin:10px;
+        padding:10px;
+      }
+      #firstrow li{
+        margin-left:20px;
+        margin-top:20px;
+        background-color:orange;
+        width:150px;
+        height:150px;
+        border:1px solid;
+        text-align:center;
+        list-style:none;
+      }
+      #secondrow li{
+        margin-left:340px;
+        margin-top:190px;
+        background-color:orange;
+        width:150px;
+        height:150px;
+        border:1px solid;
+        text-align:center;
+        list-style:none;
+      }
+    </style>
 	</head>
 	<body>
-		<!-- Your layout here -->
+		<div class = "container">
+      <ul id="firstrow" class="box">
+	      <li></li>
+	      <li></li>
+	      <li></li>
+        <li></li>
+	      <li></li>
+      </ul>
+      <ul id="secondrow" class="box">
+        <ul id="firstrow" class="box">
+	      <li></li>
+      </ul>
+    </div>
 
 	</body>
 </html>
